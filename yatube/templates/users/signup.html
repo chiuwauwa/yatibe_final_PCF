@@ -1,0 +1,14 @@
+{% extends "users/base_users.html" %}
+{% block title %}Зарегистрироваться{% endblock %}
+{% block card_header %}Зарегистрироваться{% endblock %}
+{% block card_body %}
+  {% include 'includes/form_errors.html' %}
+    <form method="post" action="{% url 'users:signup' %}">
+      {% include 'includes/gen_body.html' %}
+      <div class="col-md-6 offset-md-4">
+        <button type="submit" class="btn btn-primary">
+            Зарегистрироваться
+        </button>
+      </div>
+    </form>
+{% endblock %}
